@@ -38,9 +38,15 @@ Navigate to the root project directory you just cloned.
 ```
 cd wordpress-docker
 ```
-
-Inside your project root directory, we need to create a .env file for your environment variables.
-You can copy and paste the content from [example.env](./example.env), but please keep in mind that the values ​​should only be used for local development for security reasons.
+> [!NOTE]
+> Inside your project root directory, you need to create a `.env` file for your environment variables.  
+> You can copy and paste the content from [example.env](./example.env) by running:
+>
+> ```
+> cp example.env .env
+> ```
+>
+> Please keep in mind that the values should only be used for local development for security reasons.
 
 Docker Compose automatically loads .env files, so you don’t need to reference it manually.
 
@@ -63,6 +69,9 @@ Or if running on a server with a public IP:
 http://<your-ip>:8080
 ```
 
+You should now see the WordPress installation page.  
+After accessing the site, you must complete the WordPress setup by selecting a site title, creating an admin account, and configuring your preferred settings.
+
 Please check the list of typical Docker commands in the section [Docker Management Commands](#docker-compose-commands)
 
 ## 🧑‍💻 Usage
@@ -71,10 +80,7 @@ Please check the list of typical Docker commands in the section [Docker Manageme
 
 General Informations:
 
-To reduce image size and improve build performance, we need to create a [.dockerignore](./.dockerignore) file.
 That [docker-compose.yml](./docker-compose.yaml) file tells Docker exactly how to build, run, configure, and manage your project — all in one place.
-
-In our case all required files already exist. There is nothing to do here.
 
 ### Docker Compose Commands
 
